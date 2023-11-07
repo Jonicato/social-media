@@ -7,7 +7,6 @@ const errors = require('../network/errors.js')
 
 const user = require('./components/user/routes.js');
 const auth = require('./components/auth/routes.js');
-const post = require('./components/post/routes.js');
 
 const app = express();
 
@@ -16,7 +15,6 @@ app.use(bodyParser.json());
 // Router
 app.use('/api/user', user);
 app.use('/api/auth', auth);
-app.use('/api/post', post);
 
 app.use(errors);
 
